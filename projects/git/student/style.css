@@ -1,0 +1,126 @@
+/* CSS VARIABLES (Light Mode Default) */
+:root {
+    --bg-color: #f4f7fc;
+    --card-bg: #ffffff;
+    --text-color: #222;
+    --accent: #0b76ef;
+    --list-bg: #eef4ff;
+}
+
+/* Dark Mode Variables */
+body.dark {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #f1f1f1;
+    --accent: #4fa3ff;
+    --list-bg: #2a2a2a;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page Layout */
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+    color: var(--text-color);
+    transition: all 0.4s ease;
+}
+
+/* Dark Mode Button */
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Main Card */
+.container {
+    background: var(--card-bg);
+    width: 420px;
+    padding: 25px 30px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+h1 {
+    color: var(--accent);
+}
+
+h3 {
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+hr {
+    margin: 15px 0;
+}
+
+/* Input */
+.input-group {
+    margin-bottom: 15px;
+}
+
+#studentInput {
+    width: 70%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    background: transparent;
+    color: var(--text-color);
+}
+
+/* Buttons */
+button {
+    padding: 10px 14px;
+    background: var(--accent);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* List */
+ul {
+    list-style: none;
+}
+
+li {
+    background: var(--list-bg);
+    margin: 6px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background: crimson;
+    font-size: 13px;
+    padding: 6px 10px;
+}
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+    const btn = document.querySelector(".theme-toggle");
+    btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+}

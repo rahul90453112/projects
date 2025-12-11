@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+
+<body>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+
+    <div class="container">
+        <h1>List of Students</h1>
+        <h3>Class of AIML</h3>
+        <hr>
+
+        <div class="input-group">
+            <input id="studentInput" type="text" placeholder="Enter student name">
+            <button onclick="addStudent()">Add</button>
+        </div>
+
+        <ul id="studentList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
